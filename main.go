@@ -113,7 +113,7 @@ func calendar(from, to time.Time) string {
 	fmt.Fprint(&buf, fg("     Mon Tue Wed Thu Fri Sat Sun", 231))
 
 	first := time.Date(from.Year(), from.Month(), 1, 0, 0, 0, 0, from.Location())
-	last := time.Date(to.Year(), to.Month()+1, 0, 0, 0, 0, 0, to.Location()).AddDate(0, 0, -1)
+	last := time.Date(to.Year(), to.Month()+1, 1, 0, 0, 0, 0, to.Location()).AddDate(0, 0, -1)
 
 	var newMonth bool
 
@@ -173,7 +173,7 @@ func calendar(from, to time.Time) string {
 		}
 
 		// Newline after Sunday
-		if d.Weekday() == time.Sunday {
+		if d.Weekday() == time.Sunday && !d.Equal(last) {
 			buf.WriteByte('\n')
 		}
 	}
