@@ -4,9 +4,9 @@
 
 Prints date spans.
 
-<img src="img/001.png" width="530px"></br>
-<img src="img/002.png" width="530px"></br>
-<img src="img/003.png" width="530px"></br>
+<img src="img/001.png" width="630px"></br>
+<img src="img/002.png" width="630px"></br>
+<img src="img/003.png" width="630px"></br>
 
 ## Usage
 ```

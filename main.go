@@ -71,12 +71,14 @@ func main() {
 
 		switch {
 		case workday > 0 && weekend > 0:
-			fmt.Printf("%d day%s (%d work day%s + %d weekend day%s)\n", days, pl(days), workday, pl(workday), weekend, pl(weekend))
+			fmt.Printf("%d day%s (%d work day%s + %d weekend day%s)", days, pl(days), workday, pl(workday), weekend, pl(weekend))
 		case workday > 0 && weekend == 0:
-			fmt.Printf("%d work day%s\n", workday, pl(workday))
+			fmt.Printf("%d work day%s", workday, pl(workday))
 		case workday == 0 && weekend > 0:
-			fmt.Printf("%d weekend day%s\n", weekend, pl(weekend))
+			fmt.Printf("%d weekend day%s", weekend, pl(weekend))
 		}
+
+		fmt.Printf(" (%d night%s)\n", days-1, pl(days-1))
 	}
 }
 
