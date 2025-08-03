@@ -51,6 +51,10 @@ func main() {
 		}
 	}
 
+	if to.Before(from) {
+		from, to = to, from
+	}
+
 	cStr := calendar(from, to)
 
 	fmt.Println(cStr)
